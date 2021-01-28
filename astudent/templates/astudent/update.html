@@ -1,0 +1,42 @@
+{% extends 'base.html' %}\
+{% block functionadd %}
+ <div class="card-header py-3">
+                           <h6>Update Student</h6> 
+                        </div>
+                        {% endblock functionadd %}
+{% block content %}
+<div>
+    <form action="" method="post">
+         {% csrf_token %}
+    <div>
+        <label>
+           <div>First Name: </div> 
+        </label>
+        <input type="text" name="first_name" class="form-control form-control-sm" value="{{students.first_name}}">
+    </div>
+     <div>
+        <label>
+           <div>Last Name: </div> 
+        </label>
+        <input type="text" name="last_name" class="form-control form-control-sm" value="{{students.last_name}}">
+    </div>
+     <div>
+        <label>
+           <div>Birthday: </div> 
+        </label>
+        <input type="date" name="birthday" class="form-control form-control-sm" value="{{students.birthday}}">
+    </div>
+     <div>
+        <label>
+           <div>Address: </div> 
+        </label>
+        <input type="text" name="address" class="form-control form-control-sm" value=" {{students.address}}">
+    </div>
+    <div>
+    <p></p>
+    <input type="submit" name="updatesave">
+</div>
+    </form>
+</div>
+
+{% endblock content %}
